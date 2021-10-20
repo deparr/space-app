@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Dota Stats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+  <body>
+    <div id="topbar">
+      <div></div>
+      <div id="submitForm">
+        <h1>Space Stuff</h1>
+        <div></div>
+        <form id="userform">
+          <input type="text" id="userid" placeholder="steam user ID" />
+          <input type="submit" id="submit" value="submit"/>
+        </form>
+      </div>
+    </div>
+
+
+
+    <!-- API DATA -->
+    <div id="roundnessCheck">
+      <h1>Roundness Check</h1>
+      <p>Ever wanted a nice reminder that the earth is still round? No?<br>Well, anyway, you can input a date to fetch a photo taken by NASA's <a href="https://www.nasa.gov/stem-ed-resources/DSCOVR_EPIC.html">EPIC sat</a>.</p>
+
+      <form id="rcDate">
+        <br>
+        <label><em>Picture date, defaults to most recent</em></label>
+        <br>
+        <input type="date" id="dateEpic" />
+        <input type="submit" id="epicSubmit" value="submit" />
+      </form>
+      <img id="epicImg" src=""/>
+      <p id="epicImgCap"></p>
+    </div>
+
+
+  </body>
+
+  <div id="footer">
+    <a href="https://github.com/parromd/space-app"><img src="/images/GitHub-Mark-32px.png" height="32" width="32"/></a>
+    <a href="https://github.com/parromd/space-app">  parromd</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <script text="type/javascript" src="/script.js"></script>
+
+</html>
