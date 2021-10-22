@@ -3,37 +3,47 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Dota Stats</title>
+  <title>Space Stuff</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 
   <body>
     <div id="topbar">
-      <div></div>
-      <div id="submitForm">
-        <h1>Space Stuff</h1>
-        <div></div>
-        <form id="userform">
-          <input type="text" id="userid" placeholder="steam user ID" />
-          <input type="submit" id="submit" value="submit"/>
-        </form>
-      </div>
+      <h1>Space Stuff</h1>
     </div>
 
-
-
-    <!-- API DATA -->
+    <div id="solarFlare">
+      <form id="flareInput">
+        <label><em>Days of data to fetch</em></label>
+        <br>
+        <input type="number" id="flareDays" value="30"/>
+        <input type="submit" class="getButton" value="get" />
+      </form>
+      <div id="flareData">
+        <div id="flareHeader">
+          <p id="flrID">Flare ID</p>
+          <p id="instruments">Capped By</p>
+          <p id="beginTime">Begin Time</p>
+          <p id="endTime">End Time</p>
+          <p id="peakTime">Peak Time</p>
+          <p id="classType">Class Type</p>
+          <p id="sourceLocation">Source Location</p>
+          <p id="link">ccmc Link</p>
+        </div>
+      </div>
+    </div>
+    
     <div id="roundnessCheck">
       <h1>Roundness Check</h1>
-      <p>Ever wanted a nice reminder that the earth is still round? No?<br>Well, anyway, you can input a date to fetch a photo taken by NASA's <a href="https://www.nasa.gov/stem-ed-resources/DSCOVR_EPIC.html">EPIC sat</a>.</p>
+      <p>Ever wanted a nice reminder that the earth is still round?<br>Now you can! Just input a date to fetch a photo taken by NASA's <a class="link" href="https://www.nasa.gov/stem-ed-resources/DSCOVR_EPIC.html">EPIC satellite</a>.</p>
 
-      <form id="rcDate">
+      <form id="rcInput">
         <br>
         <label><em>Picture date, defaults to most recent</em></label>
         <br>
         <input type="date" id="dateEpic" />
-        <input type="submit" id="epicSubmit" value="submit" />
+        <input type="submit" class="getButton" value="submit" />
       </form>
       <img id="epicImg" src=""/>
       <p id="epicImgCap"></p>
