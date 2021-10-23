@@ -14,33 +14,41 @@
     </div>
 
     <div id="solarFlare">
-      <form id="flareInput">
-        <label><em>Days of data to fetch</em></label>
+      <div>
+        <h2>Solar Flare Data</h2>
         <br>
-        <input type="number" id="flareDays" value="30"/>
-        <input type="submit" class="getButton" value="get" />
-      </form>
-      <div id="flareData">
-        <div id="flareHeader">
-          <p id="flrID">Flare ID</p>
-          <p id="instruments">Capped By</p>
-          <p id="beginTime">Begin Time</p>
-          <p id="endTime">End Time</p>
-          <p id="peakTime">Peak Time</p>
-          <p id="classType">Class Type</p>
-          <p id="sourceLocation">Source Location</p>
-          <p id="link">ccmc Link</p>
-        </div>
+        <p>Requests solar flare data from the <a class="link" href="https://ccmc.gsfc.nasa.gov/donki/">DONKI</a> space weather api.</p>
+        <br>
+        <form id="flareInput">
+          <label><em>Days of data to fetch</em></label>
+          <br>
+          <input type="number" id="flareDays" value="30"/>
+          <input type="submit" class="getButton" value="submit" />
+        </form>
       </div>
+        <table id="flareData">
+        <tr id="flareHeader">
+          <th id="flrID">Flare ID</th>
+          <th id="instruments">Recorded By</th>
+          <th id="beginTime">Begin Time</th>
+          <th id="endTime">End Time</th>
+          <th id="peakTime">Peak Time</th>
+          <th id="classType">Class Type</th>
+          <th id="sourceLocation">Source Location</th>
+          <th id="link">CCMC Link</th>
+        </tr>
+      </table>
     </div>
     
     <div id="roundnessCheck">
-      <h1>Roundness Check</h1>
-      <p>Ever wanted a nice reminder that the earth is still round?<br>Now you can! Just input a date to fetch a photo taken by NASA's <a class="link" href="https://www.nasa.gov/stem-ed-resources/DSCOVR_EPIC.html">EPIC satellite</a>.</p>
-
+      <div>
+        <h2>Roundness Check</h2>
+        <br>
+        <p>Fetch an image taken NASA's <a class="link" href="https://www.nasa.gov/stem-ed-resources/DSCOVR_EPIC.html">EPIC</a> satellite to check if the Earth is still round.</p>
+      </div>
       <form id="rcInput">
         <br>
-        <label><em>Picture date, defaults to most recent</em></label>
+        <label><em>Picture date, default is current</em></label>
         <br>
         <input type="date" id="dateEpic" />
         <input type="submit" class="getButton" value="submit" />

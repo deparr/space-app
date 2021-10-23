@@ -4,20 +4,12 @@ const key = "api_key=DmdbgSZ2HYy9DBr0GLAcuXOkpVbNSIZe6AgFtKLs";
 const epicURL = "https://api.nasa.gov/EPIC/";
 const flrURL = "https://api.nasa.gov/DONKI/FLR?";
 
-// Get background image
-/*const podURL = "https://api.nasa.gov/planetary/apod?api_key=" + key;
-fetch(podURL)
-    .then(function (response) {
-        return response.json();
-    }).then(function(json) {
-        document.getElementById("topbar").style.backgroundImage = "url(" + json.url + ")";
-    });
-*/
 
 
 document.getElementById("flareInput").addEventListener("submit", function(event) {
     event.preventDefault();
-    document.getElementById("flareData").style.display = "flex";
+    document.getElementById("flareData").style.display = "table";
+    document.getElementById("flareData").style.backgroundImage = "url(\"/images/space.svg\")";
 
     let daysToFetch = parseInt(document.getElementById("flareDays").value);
     let startDate = new Date();
@@ -39,34 +31,40 @@ document.getElementById("flareInput").addEventListener("submit", function(event)
             let table = document.getElementById("flareData");
             let header = document.getElementById("flareHeader");
             for (let i = 0; i < json.length; i++) {
-                let row = document.createElement("div")
+                let row = document.createElement("tr")
                 row.classList.add("flareRow");
                 for (let j = 0; j < header.children.length; j++) {
-                    let p = document.createElement("p");
+                    let p = document.createElement("td");
                     if (header.children[j].id === "instruments") {
                         p.innerHTML = json[i]["instruments"][0].displayName;
                     }
                     else if (header.children[j].id === "link") {
-                        p = document.createElement("a");
-                        p.innerHTML = "more info";
-                        p.classList.add("link");
-                        p.href = json[i]["link"];
-
+                        a = document.createElement("a");
+                        a.innerHTML = "more info";
+                        a.classList.add("link");
+                        a.href = json[i]["link"];
+                        p.appendChild(a);
                     }
                     else {
                         p.innerHTML = json[i][header.children[j].id];
                     }
 
                     p.classList.add(header.children[j].id);
+                    p.classList.add("flareEle");
                     row.appendChild(p);
                 }
 
                 if (row.children[3].innerHTML === "") {
-                    row.children[3].innerHTML = "no end date recorded";
+                    row.children[3].innerHTML = "no end date record";
                 }
                 table.appendChild(row);
             }
+            document.getElementById("footer").classList.add("footerPos");
+            if (document.getElementById("epicImg").getAttribute("src") != "") {
+                document.getElementById("footer").style.position = "relative";
+            }
         })
+
     
 });
 
@@ -93,6 +91,9 @@ document.getElementById("rcInput").addEventListener("submit", function(event) {
             earthImg.height = "400";
 
             document.getElementById("epicImgCap").innerHTML = "<em>" + json[0].date + "</em>";
+            if (document.getElementById("flareData").style.display === "table") {
+                document.getElementById("footer").style.position = "relative";
+            }
             
         });
 });

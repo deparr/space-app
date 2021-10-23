@@ -9,6 +9,7 @@
 body {
     width: 100%;
     height: 100%;
+    background-color: #f5f5f5;
 }
 
 
@@ -18,12 +19,35 @@ label {
 }
 
 .link:visited {
-    color: gray;
+    color: rgb(255, 180, 42);
 }
 
 .link {
-    color: gray;
-    text-decoration: none;
+    color: rgb(255, 180, 42);
+}
+
+.getButton {
+    padding-left: 2px;
+    padding-right: 2px;
+
+    font-weight: bold;
+}
+
+#topbar {
+    height: 120px;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-image: url('/images/space.svg');
+}
+
+#solarFlare {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 #flareDays {
@@ -36,29 +60,30 @@ label {
     margin-left: 5%;
     margin-right: 5%;
     display: none;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    border-spacing: 15px;
+    border-radius: 20px;
+    color: white;
 }
 
 #flareHeader {
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    padding-left: 60px;
-    padding-right: 60px;
     text-align: center;
 }
 
 
 .flareRow {
-    display: flex;
-    width: 100%;
-    flex-flow: row;
-    column-gap: 5%;
-    justify-content: space-evenly;
     font-size: .85rem;
+}
+
+.flareEle {
+    text-align: center;
+}
+
+
+#roundnessCheck {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
 }
 
 
@@ -75,11 +100,26 @@ label {
     width: 100%;
     bottom: 0;
     position: absolute;
-    background-color: #f0f0f0;
+    background-color: #ccc;
     align-items: center;
+    margin-top: 30px;
 }
 
 #footer a {
     color: gray;
     text-decoration: none;
+}
+
+
+
+@media screen and (max-width:960px) {
+    .footerPos {
+        position: relative !important;
+    }
+}
+
+@media screen and (min-width:961px) {
+    .footerPos {
+        position: absolute;
+    }
 }
