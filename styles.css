@@ -117,12 +117,9 @@ label {
 }
 
 @media screen and (max-width:450px) {
-    #topbar, #roundnessCheck, #solarFlare {
-        font-size: 2rem;
-    }
-
     #flareData {
-        overflow: scroll;
+        margin: 0;
+        border-spacing: 5px;
     }
 }
 
