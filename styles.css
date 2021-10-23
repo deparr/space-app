@@ -119,8 +119,8 @@ label {
 @media screen and (max-width:500px) {
     #flareData {
         margin: 0;
-        border-spacing: 2px;
-        font-size: .85rem;
+        border-spacing: 8px;
+        font-size: .65rem;
     }
 
     #tableScroll {
