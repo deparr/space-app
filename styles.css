@@ -33,6 +33,12 @@ label {
     font-weight: bold;
 }
 
+#page {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 #topbar {
     height: 120px;
     color: white;
