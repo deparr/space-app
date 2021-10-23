@@ -110,7 +110,11 @@ label {
     text-decoration: none;
 }
 
-
+@media screen and (max-width:450px) {
+    #topbar, #roundnessCheck, #solarFlare {
+        font-size: large;
+    }
+}
 
 @media screen and (max-width:960px) {
     .footerPos {
