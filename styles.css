@@ -119,7 +119,8 @@ label {
 @media screen and (max-width:450px) {
     #flareData {
         margin: 0;
-        border-spacing: 5px;
+        border-spacing: 2px;
+        font-size: .85rem;
     }
 }
 
