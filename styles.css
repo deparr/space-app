@@ -122,6 +122,10 @@ label {
         border-spacing: 2px;
         font-size: .85rem;
     }
+
+    #tableScroll {
+        overflow-x: scroll;
+    }
 }
 
 @media screen and (max-width:960px) {
