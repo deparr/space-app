@@ -112,7 +112,7 @@ label {
 
 @media screen and (max-width:450px) {
     #topbar, #roundnessCheck, #solarFlare {
-        font-size: large;
+        font-size: 2rem;
     }
 }
 
