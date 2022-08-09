@@ -1,5 +1,4 @@
-// API KEY DmdbgSZ2HYy9DBr0GLAcuXOkpVbNSIZe6AgFtKLs -- nasa
-const key = "api_key=DmdbgSZ2HYy9DBr0GLAcuXOkpVbNSIZe6AgFtKLs";
+const key = "";
 
 const epicURL = "https://api.nasa.gov/EPIC/";
 const flrURL = "https://api.nasa.gov/DONKI/FLR?";
